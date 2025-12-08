@@ -1,0 +1,9 @@
+{
+    "name": "git",
+    "description": "Git 작업 편의 기능을 제공하는 플러그인",
+    "version": "1.0.0",
+    "author": {
+        "name": "JiseonLee"
+    },
+    "keywords": ["git", "github", "commit", "push", "pull request"]
+}
