@@ -1,14 +1,18 @@
 {
-    "name": "wedatalab-plugins",
-    "description": "Wedatalab AI Lab 공용 Claude Code 플러그인 모음",
+    "name": "jiseonlee-plugins",
+    "description": "JiseonLee 개인 Claude Code 플러그인 모음",
     "owner": {
-        "name": "wedatalab",
-        "url": "https://github.com/WeDataLab-AI-Lab"
+        "name": "jiseonlee",
+        "url": "https://github.com/JiseonLee-jul"
     },
     "plugins": [
         {
             "name": "auto-test-generator",
             "source": "./plugins/auto-test-generator"
+        },
+        {
+            "name": "git",
+            "source": "./plugins/git"
         }
     ]
 }

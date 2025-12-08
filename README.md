@@ -1,12 +1,12 @@
-# Wedatalab Plugins
+# JiseonLee Plugins
 
-Wedatalab AI Lab에서 개발한 사내 공용 Claude Code 플러그인 모음입니다. 반복적인 개발 작업을 자동화하고 팀 전체의 생산성을 향상시키기 위해 제작되었습니다.
+JiseonLee 개인용 Claude Code 플러그인 모음입니다. 반복적인 개발 작업을 자동화하고 생산성을 향상시키기 위해 제작되었습니다.
 
 ## Quick Start
 
 Claude Code에 마켓플레이스 등록
 ```
-/plugin marketplace add WeDataLab-AI-Lab/claude-plugins
+/plugin marketplace add JiseonLee-jul/claude-plugins
 ```
 
 플러그인 관리 인터페이스 열기
@@ -16,7 +16,7 @@ Claude Code에 마켓플레이스 등록
 
 특정 플러그인 설치
 ```
-/plugin install {plugin_name}@wedatalab-plugins
+/plugin install {plugin_name}@jiseonlee-plugins
 ```
 
 ## Plugin 목록
@@ -24,6 +24,7 @@ Claude Code에 마켓플레이스 등록
 | 플러그인 | 버전 | 설명 |
 |---------|-----|------|
 | auto-test-generator | 0.1.0 | 시나리오 기반 테스트 코드 자동 생성 플러그인 |
+| git | 1.0.0 | Git 작업 편의 기능을 제공하는 플러그인 |
 
 ## Plugin Schema
 
