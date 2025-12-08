@@ -1,0 +1,9 @@
+{
+    "name": "auto-test-generator",
+    "description": "시나리오 기반 테스트 코드 자동 생성 플러그인",
+    "version": "0.1.0",
+    "author": {
+        "name": "wedatalab"
+    },
+    "keywords": ["test"]
+}
