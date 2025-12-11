@@ -8,12 +8,13 @@ description: Create a git commit
 
 - Current git status: !`git status`
 - Current git diff (staged and unstaged changes): !`git diff HEAD`
-- Current branch: !`git branch --show-current`
 - Recent commits: !`git log --oneline -10`
 
 ## Your task
 
 Based on the above changes, create a single git commit.
+If NO staged changes exist, run `git add .` to stage all changes before committing.
+
 If $ARGUMENTS are provided, use them as the commit message EXACTLY AS IS.
 IF $ARGUMENTS are empty, generate a concise summary following @commit-message-rules
 
