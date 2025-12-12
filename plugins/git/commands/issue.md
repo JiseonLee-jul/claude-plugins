@@ -4,14 +4,11 @@ argument-hint: <issue-number>
 description: Create a branch linked to a GitHub issue
 ---
 
-## Precondition
-
-!`if [ -z "$ARGUMENTS" ]; then echo "Issue Number를 입력하세요"; exit 1; fi`
-If precondition fails, stop here and do not proceed.
 
 ## Context
 
-- Issue details: !`gh issue view $ARGUMENTS`
+- Issue details: !`[ -n "$ARGUMENTS" ] && gh issue view $ARGUMENTS`
+- Linked branches: !`[ -n "$ARGUMENTS" ] && gh issue develop --list $ARGUMENTS`
 - Current branch: !`git branch --show-current`
 - Remote: !`git remote -v`
 
@@ -19,6 +16,7 @@ If precondition fails, stop here and do not proceed.
 
 1. Fetch the issue information using the provided issue number
 2. Create a branch name following @branch-name conventions
-3. Create the branch using `gh issue develop $ARGUMENTS --name <branch-name>` to link it to the issue
-   - If gh issue develop is not available, create branch manually and push with `-u`
-   
+3. Create the branch to link it to the issue
+   ```bash
+   gh issue develop $ARGUMENTS --name <branch-name>
+   ```
