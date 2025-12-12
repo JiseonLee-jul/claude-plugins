@@ -51,7 +51,7 @@ gh auth status
 |------|------|------|
 | Command | `/git:commit` | 변경사항을 자동 분석하여 커밋 생성 |
 | Command | `/git:pr` | PR 생성 (push + gh pr create) |
-| Command | `/git:issue` | GitHub Issue와 연동된 브랜치 생성 |
+| Command | `/git:issue-branch` | GitHub Issue와 연동된 브랜치 생성 |
 | Command | `/git:cleanup` | 삭제된 원격 브랜치의 로컬 정리 |
 | Skill | `commit-message-rules` | Conventional Commit 형식 가이드 |
 | Skill | `branch-name` | 브랜치 네이밍 컨벤션 |
@@ -101,13 +101,13 @@ gh auth status
 
 ---
 
-### `/git:issue <issue-number>`
+### `/git:issue-branch <issue-number>`
 
 GitHub Issue와 연동된 브랜치를 생성합니다.
 
 **사용법:**
 ```bash
-/git:issue 42
+/git:issue-branch 42
 ```
 
 **동작:**
