@@ -2,11 +2,53 @@
 
 Git 작업 편의 기능을 제공하는 Claude Code 플러그인입니다. 커밋, PR 생성, 브랜치 관리 등 반복적인 Git 작업을 자동화합니다.
 
+## 요구사항
+
+이 플러그인은 **GitHub CLI (`gh`)**가 필요합니다.
+
+### 1. GitHub CLI 설치
+
+**macOS:**
+```bash
+brew install gh
+```
+
+**Windows:**
+```bash
+winget install GitHub.cli
+```
+
+**Linux (Debian/Ubuntu):**
+```bash
+sudo apt install gh
+```
+
+
+### 2. GitHub 인증
+
+```bash
+gh auth login
+```
+
+인증 옵션 선택:
+- **Account**: GitHub.com (또는 GitHub Enterprise)
+- **Protocol**: HTTPS 권장
+- **Authenticate**: 브라우저 로그인 또는 토큰 입력
+
+### 3. 설치 확인
+
+```bash
+gh auth status
+```
+
+`Logged in to github.com` 메시지가 표시되면 준비 완료입니다.
+
+---
+
 ## 기능 요약
 
 | 구분 | 이름 | 설명 |
 |------|------|------|
-| Command | `/git:setup` | GitHub MCP 서버 설정 가이드 |
 | Command | `/git:commit` | 변경사항을 자동 분석하여 커밋 생성 |
 | Command | `/git:pr` | PR 생성 (push + gh pr create) |
 | Command | `/git:issue` | GitHub Issue와 연동된 브랜치 생성 |
@@ -18,26 +60,12 @@ Git 작업 편의 기능을 제공하는 Claude Code 플러그인입니다. 커�
 ## 설치
 
 ```bash
-/plugin install git@wedatalab-plugins
+/plugin install git@jiseonlee-plugins
 ```
-
-## Commands
-
-### `/git:setup`
-
-GitHub MCP 서버 설정 가이드를 제공합니다.
-
-**사용법:**
-```bash
-/git:setup
-```
-
-**동작:**
-1. GitHub Personal Access Token (PAT) 생성 방법 안내
-2. GitHub MCP 서버 추가 명령어 제공
-3. 설정 확인 방법 안내
 
 ---
+
+## Commands
 
 ### `/git:commit [message]`
 
