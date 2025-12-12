@@ -4,6 +4,11 @@ argument-hint: <issue-number>
 description: Create a branch linked to a GitHub issue
 ---
 
+## Precondition
+
+!`if [ -z "$ARGUMENTS" ]; then echo "Issue Number를 입력하세요"; exit 1; fi`
+If precondition fails, stop here and do not proceed.
+
 ## Context
 
 - Issue details: !`gh issue view $ARGUMENTS`
