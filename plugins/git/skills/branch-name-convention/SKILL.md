@@ -1,5 +1,5 @@
 ---
-name: branch-name
+name: branch-name-convention
 description: Use when creating or naming git branches. Provides consistent branch naming conventions.
 ---
 

@@ -50,11 +50,12 @@ gh auth status
 | 구분 | 이름 | 설명 |
 |------|------|------|
 | Command | `/git:commit` | 변경사항을 자동 분석하여 커밋 생성 |
-| Command | `/git:pr` | PR 생성 (push + gh pr create) |
+| Command | `/git:pr` | PR 생성 |
+| Command | `/git:commit-push-pr` | 커밋, 푸시, PR 생성을 한번에 수행 |
 | Command | `/git:issue-branch` | GitHub Issue와 연동된 브랜치 생성 |
 | Command | `/git:cleanup` | 삭제된 원격 브랜치의 로컬 정리 |
 | Skill | `commit-message-rules` | Conventional Commit 형식 가이드 |
-| Skill | `branch-name` | 브랜치 네이밍 컨벤션 |
+| Skill | `branch-name-convention` | 브랜치 네이밍 컨벤션 |
 | Skill | `pr-rules` | PR 작성 규칙 |
 
 ## 설치
@@ -86,7 +87,7 @@ gh auth status
 
 ### `/git:pr`
 
-현재 브랜치의 변경사항을 기반으로 Pull Request를 생성합니다.
+현재 브랜치의 커밋을 기반으로 Pull Request를 생성합니다.
 
 **사용법:**
 ```bash
@@ -98,6 +99,23 @@ gh auth status
 2. 원격에 브랜치 push
 3. `pr-rules`에 따라 PR 제목/본문 자동 생성
 4. `gh pr create`로 PR 생성
+
+---
+
+### `/git:commit-push-pr`
+
+브랜치 생성부터 PR 생성까지 한번에 수행합니다.
+
+**사용법:**
+```bash
+/git:commit-push-pr
+```
+
+**동작:**
+1. main 브랜치인 경우 `branch-name-convention`에 따라 새 브랜치 생성
+2. `commit-message-rules`에 따라 커밋 생성
+3. 원격에 브랜치 push
+4. `pr-rules`에 따라 PR 생성
 
 ---
 
@@ -150,7 +168,7 @@ refactor: AuthService의 generateToken 메서드 가독성 개선
 
 ---
 
-### branch-name
+### branch-name-convention
 
 브랜치 네이밍 컨벤션입니다.
 
