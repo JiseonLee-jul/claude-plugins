@@ -1,0 +1,9 @@
+{
+    "name": "python-quality-pack",
+    "description": "Python 개발 품질 향상을 위한 도구 모음",
+    "version": "0.1.0",
+    "author": {
+        "name": "JiseonLee"
+    },
+    "keywords": ["python", "ruff", "linter", "formatter", "code-quality"]
+}
