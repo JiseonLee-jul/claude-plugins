@@ -1,0 +1,1 @@
+**[emojis exclusion]** Never use **emojis** — in text, comments, commits, or documentation.
