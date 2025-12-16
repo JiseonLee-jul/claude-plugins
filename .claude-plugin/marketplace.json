@@ -13,6 +13,10 @@
         {
             "name": "git",
             "source": "./plugins/git"
+        },
+        {
+            "name": "python-quality-pack",
+            "source": "./plugins/python-quality-pack"
         }
     ]
 }
