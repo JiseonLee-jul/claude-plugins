@@ -16,5 +16,5 @@ Based on the above changes:
 1. Create a new branch if on the default branch following @branch-name-convention
 2. Create a single commit following @commit-message-convention
 3. Push the branch to origin
-4. Create a pull request using `gh pr create` following @pr-rules
+4. Create a pull request using `gh pr create` following @pr-convention
 5. You have the capability to call multiple tools in a single response. You MUST do all of the above in a single message. Do not use any other tools or do anything else. Do not send any other text or messages besides these tool calls.

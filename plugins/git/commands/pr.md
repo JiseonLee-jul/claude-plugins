@@ -12,7 +12,7 @@ description: Create PR
 
 ## Your task
 
-Based on the above commits in this branch, create a pull request following @pr-rules:
+Based on the above commits in this branch, create a pull request following @pr-convention:
 
 1. Push current branch to remote if needed
 2. Create a pull request using `gh pr create`

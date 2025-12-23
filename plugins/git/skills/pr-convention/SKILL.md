@@ -1,5 +1,5 @@
 ---
-name: pr-rules
+name: pr-convention
 description: Use when creating GitHub pull requests. Provides PR title, body format, and labeling conventions.
 ---
 
@@ -13,20 +13,27 @@ description: Use when creating GitHub pull requests. Provides PR title, body for
 Examples:
 - `feat: 소셜 로그인(구글/카카오) 기능 구현`
 - `fix: 결제 페이지 할인 쿠폰 미적용 버그 수정`
+- `refactor: 주문 처리 로직 서비스 레이어로 분리`
+- `perf: 상품 목록 조회 쿼리 N+1 문제 해결`
 
-### Body (description)
+### Body
 
 ```markdown
 ## 1. 개요
-(Background and purpose summary)
+
+**변경 내용**
+(WHAT: Describe what was changed)
+
+**배경**
+(WHY: Explain why this change was necessary)
 
 ## 2. 주요 변경 사항
+(HOW: Describe how you solved the problem)
 - Change 1
 - Change 2
-- Change 3
 
-## 3. 테스트 방법
-(If no test method, write "없음")
+## 3. 테스트
+(Test command, verification method, or "없음")
 ```
 
 ### Labels

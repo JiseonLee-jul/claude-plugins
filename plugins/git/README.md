@@ -56,7 +56,7 @@ gh auth status
 | Command | `/git:cleanup` | 삭제된 원격 브랜치의 로컬 정리 |
 | Skill | `commit-message-convention` | Conventional Commit 형식 가이드 |
 | Skill | `branch-name-convention` | 브랜치 네이밍 컨벤션 |
-| Skill | `pr-rules` | PR 작성 규칙 |
+| Skill | `pr-convention` | PR 작성 규칙 |
 
 ## 설치
 
@@ -97,7 +97,7 @@ gh auth status
 **동작:**
 1. `origin/HEAD..HEAD` 범위의 커밋 분석
 2. 원격에 브랜치 push
-3. `pr-rules`에 따라 PR 제목/본문 자동 생성
+3. `pr-convention`에 따라 PR 제목/본문 자동 생성
 4. `gh pr create`로 PR 생성
 
 ---
@@ -115,7 +115,7 @@ gh auth status
 1. main 브랜치인 경우 `branch-name-convention`에 따라 새 브랜치 생성
 2. `commit-message-convention`에 따라 커밋 생성
 3. 원격에 브랜치 push
-4. `pr-rules`에 따라 PR 생성
+4. `pr-convention`에 따라 PR 생성
 
 ---
 
@@ -183,7 +183,7 @@ infra/chore/ci-cd
 
 ---
 
-### pr-rules
+### pr-convention
 
 Pull Request 작성 규칙입니다.
 
