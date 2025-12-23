@@ -17,7 +17,7 @@ description: Create a branch linked to a GitHub issue
    gh issue view $ARGUMENTS
    gh issue develop --list $ARGUMENTS
    ```
-2. Create a branch name following @branch-name conventions
+2. Create a branch name following @branch-name-convention
 3. Create the branch to link it to the issue
    ```bash
    gh issue develop $ARGUMENTS --name <branch-name>
