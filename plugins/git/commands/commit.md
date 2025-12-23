@@ -16,6 +16,6 @@ Based on the above changes, create a single git commit.
 If NO staged changes exist, run `git add .` to stage all changes before committing.
 
 If $ARGUMENTS are provided, use them as the commit message EXACTLY AS IS.
-IF $ARGUMENTS are empty, generate a concise summary following @commit-message-rules
+IF $ARGUMENTS are empty, generate a concise summary following @commit-message-convention
 
 You have the capability to call multiple tools in a single response. Stage and create the commit using a single message. Do not use any other tools or do anything else. Do not send any other text or messages besides these tool calls.

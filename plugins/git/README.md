@@ -54,7 +54,7 @@ gh auth status
 | Command | `/git:commit-push-pr` | 커밋, 푸시, PR 생성을 한번에 수행 |
 | Command | `/git:issue-branch` | GitHub Issue와 연동된 브랜치 생성 |
 | Command | `/git:cleanup` | 삭제된 원격 브랜치의 로컬 정리 |
-| Skill | `commit-message-rules` | Conventional Commit 형식 가이드 |
+| Skill | `commit-message-convention` | Conventional Commit 형식 가이드 |
 | Skill | `branch-name-convention` | 브랜치 네이밍 컨벤션 |
 | Skill | `pr-rules` | PR 작성 규칙 |
 
@@ -80,7 +80,7 @@ gh auth status
 
 **동작:**
 1. `git status`와 `git diff`로 변경사항 분석
-2. 메시지가 없으면 `commit-message-rules`에 따라 자동 생성
+2. 메시지가 없으면 `commit-message-convention`에 따라 자동 생성
 3. 변경사항 스테이징 후 커밋
 
 ---
@@ -113,7 +113,7 @@ gh auth status
 
 **동작:**
 1. main 브랜치인 경우 `branch-name-convention`에 따라 새 브랜치 생성
-2. `commit-message-rules`에 따라 커밋 생성
+2. `commit-message-convention`에 따라 커밋 생성
 3. 원격에 브랜치 push
 4. `pr-rules`에 따라 PR 생성
 
@@ -153,7 +153,7 @@ GitHub Issue와 연동된 브랜치를 생성합니다.
 
 플러그인 설치 시 자동으로 적용되는 규칙입니다.
 
-### commit-message-rules
+### commit-message-convention
 
 Conventional Commit 형식을 따르는 커밋 메시지 규칙입니다.
 
