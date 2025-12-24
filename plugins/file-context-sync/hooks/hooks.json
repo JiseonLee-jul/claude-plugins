@@ -1,0 +1,48 @@
+{
+    "hooks": {
+        "PostToolUse": [
+            {
+                "matcher": "Read|Edit|Write|MultiEdit",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "python \"${CLAUDE_PLUGIN_ROOT}/scripts/record_file_access.py\""
+                    }
+                ]
+            }
+        ],
+        "UserPromptSubmit": [
+            {
+                "matcher": "",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "python \"${CLAUDE_PLUGIN_ROOT}/scripts/detect_changes.py\""
+                    }
+                ]
+            }
+        ],
+        "SessionStart": [
+            {
+                "matcher": "",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "python \"${CLAUDE_PLUGIN_ROOT}/scripts/manage_cache.py\""
+                    }
+                ]
+            }
+        ],
+        "SessionEnd": [
+            {
+                "matcher": "",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "python \"${CLAUDE_PLUGIN_ROOT}/scripts/manage_cache.py\""
+                    }
+                ]
+            }
+        ]
+    }
+}

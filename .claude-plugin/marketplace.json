@@ -17,6 +17,10 @@
         {
             "name": "python-quality-pack",
             "source": "./plugins/python-quality-pack"
+        },
+        {
+            "name": "file-context-sync",
+            "source": "./plugins/file-context-sync"
         }
     ]
 }

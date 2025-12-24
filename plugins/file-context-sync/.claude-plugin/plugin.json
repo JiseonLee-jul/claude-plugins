@@ -1,0 +1,9 @@
+{
+    "name": "file-context-sync",
+    "description": "Claude가 읽거나 수정한 파일의 외부 변경을 감지하는 플러그인",
+    "version": "0.1.0",
+    "author": {
+        "name": "JiseonLee"
+    },
+    "keywords": ["file", "context", "sync", "change-detection"]
+}

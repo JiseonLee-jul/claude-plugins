@@ -24,7 +24,8 @@ Claude Code에 마켓플레이스 등록
 | 플러그인 | 버전 | 설명 |
 |---------|-----|------|
 | auto-test-generator | 0.1.0 | 시나리오 기반 테스트 코드 자동 생성 플러그인 |
-| git | 1.0.0 | Git 작업 편의 기능을 제공하는 플러그인 |
+| file-context-sync | 0.1.0 | 파일 외부 변경 감지 플러그인 |
+| git | 1.0.1 | Git 작업 편의 기능을 제공하는 플러그인 |
 | python-quality-pack | 0.1.0 | Python 개발 품질 향상을 위한 도구 모음 |
 
 ## Plugin Schema
