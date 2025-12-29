@@ -117,18 +117,20 @@ def main() -> None:
 
 def format_message(changed_files: list, deleted_files: list, cwd: str) -> str:
     """Format the warning message for changed/deleted files."""
-    lines = ["The following files have been modified externally:"]
+    lines = ["[CONTEXT SYNC] Files modified externally since last read:"]
 
     for file_path in changed_files:
         rel_path = get_relative_path(file_path, cwd)
-        lines.append(f"- {rel_path}")
+        lines.append(f"  - {rel_path}")
 
     for file_path in deleted_files:
         rel_path = get_relative_path(file_path, cwd)
-        lines.append(f"- {rel_path} (deleted)")
+        lines.append(f"  - {rel_path} (deleted)")
 
     lines.append("")
-    lines.append("Please check the current state of these files.")
+    lines.append(
+        "You MUST re-read these files before responding. Your cached knowledge is outdated."
+    )
 
     return "\n".join(lines)
 
