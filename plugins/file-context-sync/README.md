@@ -203,7 +203,7 @@ Claude가 Read/Edit/Write/MultiEdit 도구를 사용한 후 파일 상태를 저
 {
   "hookSpecificOutput": {
     "hookEventName": "UserPromptSubmit",
-    "additionalContext": "The following files have been modified externally:\n- src/main.py\n- src/utils.py (deleted)\n\nPlease check the current state of these files."
+    "additionalContext": "[CONTEXT SYNC] Files modified externally since last read:\n  - src/main.py\n  - src/utils.py (deleted)\n\nYou MUST re-read these files before responding. Your cached knowledge is outdated."
   }
 }
 ```
