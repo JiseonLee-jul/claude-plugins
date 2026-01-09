@@ -4,6 +4,8 @@ argument-hint: <commit-message>
 description: Create a git commit
 ---
 
+## Test Commit
+
 ## Context
 
 - Current git status: !`git status`
