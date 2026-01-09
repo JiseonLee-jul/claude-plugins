@@ -8,7 +8,7 @@ description: Use when writing git commit messages. Enforces conventional commit 
 
 
 # Format
-- STRICTLY follow the Format below
+- DO NOT add any extra elements or modify the structure
 ```
 <type>: <title>
 
