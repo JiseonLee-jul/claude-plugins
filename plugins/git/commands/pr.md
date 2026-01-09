@@ -1,6 +1,6 @@
 ---
 allowed-tools: Bash(git push:*), Bash(gh pr create:*), Bash(gh pr edit:*)
-description: Create PR
+description: Create or Edit PR
 ---
 
 ## Context
