@@ -38,7 +38,12 @@ Examples:
 - Change 2
 
 ## 3. 테스트
-(Test command, verification method, or "없음")
+(ONLY include tests that were ACTUALLY performed or written by the user)
+- If user ran test commands: include the exact command (e.g., `npm test`, `pytest`)
+- If user wrote test code: reference the test file path
+- If user manually verified: describe what they actually checked
+- If no tests were performed: write "없음"
+- NEVER fabricate or assume tests that were not explicitly done
 ```
 
 ### Labels
