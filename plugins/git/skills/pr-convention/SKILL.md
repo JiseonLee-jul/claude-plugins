@@ -1,7 +1,12 @@
 ---
 name: pr-convention
-description: Use when creating GitHub pull requests. Provides PR title, body format, and labeling conventions.
+description: Use when creating or editing GitHub pull requests. Provides PR conventions.
 ---
+
+## Constraints (CRITICAL)
+
+- NEVER include phrases like `Generated with Claude Code` or `Co-Authored-By: Claude` in PR messages
+
 
 ## Format
 
@@ -62,7 +67,3 @@ Examples:
 | development | Development environment setup |
 | documentation | Add or modify documentation (including comments) |
 | ignore-for-release | Exclude from release changelog (mainly internal config changes) |
-
-
-## Constraints
-- MUST EXCLUDE phrases like `Generated with Claude Code` or `Co-Authored-By: Claude` in PR messages
