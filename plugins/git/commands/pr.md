@@ -1,7 +1,9 @@
 ---
-allowed-tools: Bash(git push:*), Bash(gh pr create:*), Bash(gh pr edit:*)
+allowed-tools: Bash(git push:*), Bash(gh pr view:*), Bash(gh pr list:*), Bash(gh pr create:*), Bash(gh pr edit:*)
 description: Create or Edit PR
 ---
+
+## Test Commit
 
 ## Context
 
@@ -9,7 +11,7 @@ description: Create or Edit PR
 - Commits in this branch (not in main): !`git log origin/HEAD..HEAD --oneline`
 - Changes summary: !`git diff origin/HEAD..HEAD --stat`
 - Detailed changes: !`git diff origin/HEAD..HEAD`
-- Existing PR: !`gh pr view`
+- Existing PR: !`gh pr view 2>/dev/null || echo "No PR exists for this branch"`
 
 ## Your task
 
