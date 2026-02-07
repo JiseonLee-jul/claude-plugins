@@ -3,8 +3,12 @@ name: commit-message-convention
 description: Use when writing git commit messages. Enforces conventional commit format with Korean descriptions. Triggers on commit creation or commit message generation requests.
 ---
 
-# Format
+## Constraints (CRITICAL)
+- NEVER include phrases like `Generated with Claude Code` or `Co-Authored-By: Claude` in commit messages
 
+
+# Format
+- DO NOT add any extra elements or modify the structure
 ```
 <type>: <title>
 
