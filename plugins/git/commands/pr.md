@@ -1,7 +1,9 @@
 ---
-allowed-tools: Bash(git push:*), Bash(gh pr view:*), Bash(gh pr create:*), Bash(gh pr edit:*)
+allowed-tools: Bash(git push:*), Bash(gh pr view:*), Bash(gh pr list:*), Bash(gh pr create:*), Bash(gh pr edit:*)
 description: Create or Edit PR
 ---
+
+## Test Commit
 
 ## Context
 
