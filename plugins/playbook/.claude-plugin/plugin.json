@@ -1,0 +1,9 @@
+{
+    "name": "playbook",
+    "description": "코딩 전 사고를 돕는 요청 템플릿 모음",
+    "version": "0.1.0",
+    "author": {
+        "name": "JiseonLee"
+    },
+    "keywords": ["architecture", "design", "planning", "template"]
+}

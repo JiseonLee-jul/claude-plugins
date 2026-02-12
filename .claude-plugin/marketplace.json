@@ -21,6 +21,10 @@
         {
             "name": "file-context-sync",
             "source": "./plugins/file-context-sync"
+        },
+        {
+            "name": "playbook",
+            "source": "./plugins/playbook"
         }
     ]
 }
