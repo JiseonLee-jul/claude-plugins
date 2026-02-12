@@ -70,7 +70,7 @@ git@github.com: Permission denied (publickey).
 | file-context-sync | 0.1.1 | 파일 외부 변경 감지 플러그인 |
 | git | 1.0.2 | Git 작업 편의 기능을 제공하는 플러그인 |
 | playbook | 0.1.0 | 코딩 전 사고를 돕는 요청 템플릿 모음 |
-| python-quality-pack | 0.1.0 | Python 개발 품질 향상을 위한 도구 모음 |
+| python-quality-pack | 0.2.0 | Python 개발 품질 향상을 위한 도구 모음 |
 
 ## Plugin Schema
 
