@@ -25,6 +25,10 @@
         {
             "name": "playbook",
             "source": "./plugins/playbook"
+        },
+        {
+            "name": "knowledge-base",
+            "source": "./plugins/knowledge-base"
         }
     ]
 }

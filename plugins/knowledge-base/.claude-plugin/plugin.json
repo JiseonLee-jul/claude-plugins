@@ -1,0 +1,9 @@
+{
+    "name": "knowledge-base",
+    "description": "Karpathy-style LLM Knowledge Base: ingest, compile, query, health-check",
+    "version": "0.1.0",
+    "author": {
+        "name": "JiseonLee"
+    },
+    "keywords": ["knowledge-base", "wiki", "knowledge-management", "llm"]
+}
