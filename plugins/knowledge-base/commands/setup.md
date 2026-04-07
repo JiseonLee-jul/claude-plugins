@@ -4,18 +4,22 @@ argument-hint: [optional kb_root path]
 description: Initialize the knowledge base (config + directory structure)
 ---
 
-## Context
-
-- Existing config: !`cat ~/.claude/knowledge-base/config 2>/dev/null || echo "NONE"`
-
 ## Your task
 
 Initialize the knowledge base by creating the config file and the complete directory structure.
 
+### Step 0: Check for existing config
+
+Use the **Read** tool to attempt reading `~/.claude/knowledge-base/config`.
+- If Read succeeds: extract the existing `kb_root` path (the file content, trimmed)
+- If Read fails (file not found): treat as fresh setup (no existing config)
+
+Do NOT use `cat` or any shell command for this — use the Read tool directly. The Read tool handles paths outside the working directory via Claude Code's standard permission flow (it will prompt the user for permission once if needed).
+
 ### Step 1: Determine the KB root path
 
 - If `$ARGUMENTS` is non-empty: use it as `kb_root`
-- If existing config shows a valid path: confirm with the user whether to reuse it or replace it (use `AskUserQuestion`)
+- If Step 0 found an existing valid path: confirm with the user whether to reuse it or replace it (use `AskUserQuestion`)
 - Otherwise: ask the user where to create the knowledge base (use `AskUserQuestion` with examples like `/home/user/kb`, `./my-kb`, or `~/Documents/kb`)
 
 Expand `~` to the actual home directory before use. Normalize the path (remove trailing slash).
