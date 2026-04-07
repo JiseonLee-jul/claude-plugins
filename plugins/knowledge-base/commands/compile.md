@@ -1,24 +1,25 @@
 ---
-allowed-tools: Bash(python:*), Bash(test:*), Read, Write, Glob, Grep
+allowed-tools: Bash(python:*), Read, Write, Glob, Grep
 argument-hint:
 description: Compile new raw sources into wiki (incremental, max 10 files per run)
 ---
-
-## Context
-
-- KB root: !`cat ~/.claude/knowledge-base/config 2>/dev/null || echo "NOT_CONFIGURED"`
-- KB structure: !`KB=$(cat ~/.claude/knowledge-base/config 2>/dev/null); test -d "$KB/wiki" && echo "OK" || echo "MISSING"`
 
 ## Your task
 
 Incrementally compile new/modified raw sources into the wiki.
 
-**IMPORTANT preconditions:**
+### Step 0: Read configuration and verify structure
 
-- If KB root shows "NOT_CONFIGURED", stop and tell the user:
+Use the **Read** tool to read `~/.claude/knowledge-base/config`.
+
+- If Read fails (file not found): stop and tell the user:
   > Knowledge base is not configured. Run `/knowledge-base:setup` first.
-- If KB structure shows "MISSING", stop and tell the user:
-  > Knowledge base directory structure is missing. Run `/knowledge-base:setup` to initialize.
+- If Read succeeds: extract `kb_root` (file content trimmed). Then attempt to Read `<kb_root>/wiki/index.md` to verify the structure exists.
+  - If that Read fails: stop and tell the user:
+    > Knowledge base directory structure is missing. Run `/knowledge-base:setup` to initialize.
+  - If both Reads succeed: proceed to Step 1 with the resolved `kb_root`.
+
+**Important:** Do NOT use `cat` or `test` shell commands for these checks. The Read tool handles paths outside the working directory via Claude Code's tool permission flow.
 
 ### Step 1: Check compile status
 
